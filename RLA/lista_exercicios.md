@@ -1,5 +1,5 @@
 # UNIFOR
-**Nome**: Ikaro Chaves
+**Nome**: Ikaro Chaves <br>
 **Disciplina**: Raciocínio Lógico Algorítmico
 
 ## Exercício 3
