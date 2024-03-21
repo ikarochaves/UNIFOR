@@ -172,7 +172,7 @@ E-->Z
 
 
 #### Pseudocódigo 4
-
+```
 1  ALGORITMO classificação
 2  DECLARE x NÚMERICO INTEIRO
 3  INÍCIO
@@ -192,7 +192,7 @@ E-->Z
 17    ESCREVA "o nadador é classificado na categoria de adulto."
 18  FIM_ESCOLHA
 19  FIM_ALGORITIMO
-
+```
 
 #### Teste de mesa 4
 
