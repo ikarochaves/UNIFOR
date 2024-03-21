@@ -5,8 +5,8 @@
 **Código/Turma:** T160-39 <br>
 **Professor:** Ricardo Carubbi <br>
 **Data:**  <br>
-**Aluno(a):** Suzani Jia Yi Wang <br>
-**Matrícula:** 2416640 <br>
+**Aluno(a):** Ikaro Ruan Nunes Chaves <br>
+**Matrícula:** 2417685 <br>
 
 **1a chamada (Sim/Não):** preencha com a opção correta <br>
 **2a chamada (Sim/Não):** preencha com a opção correta
