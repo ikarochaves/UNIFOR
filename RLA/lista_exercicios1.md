@@ -130,6 +130,11 @@ G --> H
 8  SENAO
 9	 CALCULE idade_restante == 18-idade
 10	 ESCREVA "Você não é apto a tirar sua CNH! Faltam idade_restante anos para que você esteja apto."
-11  FIM_SE
-12  FIM_ALGORITIMO
+11  FIM_ALGORITIMO
 ```
+#### Teste de mesa (1.0 ponto)
+|nome  |idade|idade que falta|resultado|
+|--    |--   |--             |--       |
+|Pietra|18   |--             |Você é apto a tirar sua CNH!|
+|Pabllo |16   |18-16=2        |Você não é apto a tirar sua CNH! Faltam 2 anos para que você esteja apto.|
+|Urias |8    |18-8=10        |Você não é apto a tirar sua CNH! Faltam 10 anos para que você esteja apto.|
