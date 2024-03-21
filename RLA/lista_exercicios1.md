@@ -30,11 +30,17 @@ F --> H
 7  SE M >= 7 ENTAO
 8    ESCREVA "Parabéns, você está aprovado!"
 9  SENAO
-10    ESCREVA "Você está reprovado."
-11 FIM_SE
-12 FIM_ALGORITIMO
+10    ESCREVA "Você está reprovado.
+11 FIM_ALGORITIMO
 
 ```
+#### Teste de mesa 1
+|nota1|nota2|média|resultado|
+|--|--|--|--|
+|5|8|6.5|"Parabéns, você está aprovado!"|
+|7|3|5|"você foi reprovado!"|
+|7|7|7|"Parabéns, você está aprovado!"|
+
 ### Exercício 2
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%.
 
@@ -65,10 +71,17 @@ H --> J
 9  SENAO
 10	 CALCULE sal_reajuste2 = sal_atual+sal_atual*10/100
 11	 ESCREVA "Você recebeu um aumento de 10%! Seu novo sálario é: sal_reajuste2"
-12  FIM_SE
-13  FIM_ALGORITIMO
+12  FIM_ALGORITIMO
 
 ```
+#### Teste de mesa 2
+|salário atual|x>500|x<=500|salário final|
+|--|--|--|--|
+|450|/|450+(450*20%)|540|
+|670|670+(670*10%)|/|737|
+|500|/|500+(500*20%)|600|
+
+
 ### Exercício 3
 ```mermaid
 flowchart TD
@@ -101,7 +114,16 @@ I --> Z
 11  SENAO
 12		ESCREVA "O número é postivo!"
 13  FIM_ALGORITIMO
+
 ```
+#### Teste de mesa (0,25 ponto)
+| numero | numero >= 0 | resto | resto == 0 | Saída |
+| -- | -- | -- | -- | -- | 
+| -1 | F |   |   | "O número deve ser postivo!" |
+| 0  | V | 0 | V | "O número é par!" |
+| 13 | V | 1 | F | "O número é impar!" |
+| 30 | V | 0 | V | "O número é par!" |
+
 ### Exercício 4
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade, calcular quantos anos faltam para o candidato estar apto.
 
@@ -132,7 +154,7 @@ G --> H
 10	 ESCREVA "Você não é apto a tirar sua CNH! Faltam idade_restante anos para que você esteja apto."
 11  FIM_ALGORITIMO
 ```
-#### Teste de mesa (1.0 ponto)
+#### Teste de mesa 4
 |nome  |idade|idade que falta|resultado|
 |--    |--   |--             |--       |
 |Pietra|18   |--             |Você é apto a tirar sua CNH!|
