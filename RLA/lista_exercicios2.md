@@ -9,7 +9,7 @@ Calcule a média de quatro números inteiros dados
 #### Fluxograma 1
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{Digite quatro números inteiros}}
+A([INICIO]) --> B{{Digite quatro números inteiros}} 
 B --> C[\N1, N2, N3, N4\]
 C --> D{N1, N2, N3, N4 >= 0}
 D --NÃO--> G
@@ -23,12 +23,12 @@ F --> G([FIM])
 1  ALGORITIMO media_numeros
 2  DECLARE N1, N2, N3, N4, M
 3  INICIO
-4  ESCREVA "Digite quatro números inteiros"
-5  LEIA N1, N2, N3, N4
-6  SE N1, N2, N3, N4 >= 0 ENTAO
-7	  CALCULE M = N1+N2+N3+N4/4
-8	  ESCREVA "A média dos quatro números é:" 
-9  SENAO
+4  ESCREVA "Digite quatro números inteiros" // entrada para variaveis
+5  LEIA N1, N2, N3, N4 // armazena a entrada dos usuarios nas variaveis "N1", "N2", N3" e "N4"
+6  SE N1, N2, N3, N4 >= 0 ENTAO //executa a instrucao se as variaveis forem >= 0
+7	  CALCULE M = N1+N2+N3+N4/4 // calcular a media das quatro variaveis
+8	  ESCREVA "A média dos quatro números é M:" 
+9  SENAO 
 10	  ESCREVA "Digite quatro números inteiros"
 11  FIM_ALGORITIMO
   
@@ -62,9 +62,9 @@ E --> F([FIM])
 1  ALGORITIMO calcular_temp
 2  DECLARE temp, F
 3  INICIO
-4  ESCREVA "Digite a temperatura atual em graus celsius"
-5  LEIA temp
-6	 CALCULE F = 9/5 * temp + 32
+4  ESCREVA "Digite a temperatura atual em graus celsius" // entrada para primeira variavel
+5  LEIA temp // armazena a entrada do usuario na variavel "temp"
+6	 CALCULE F = 9/5 * temp + 32 // calcula a temperatura em F utilizando a formula
 7	 ESCREVA "Sua temperatura em fahrenhite é: F" 
 8  FIM_ALGORITIMO
   
@@ -114,20 +114,20 @@ H --> Z([FIM])
 2  DECLARE X1, X2
 3  op: caractere
 4  INICIO
-5  ESCREVA "Digite dois números:"
-6  LEIA X1, X2
-7	 ESCREVA "Escolha uma das operações [+][-][*][/]:"
-8	 LEIA op 
-9     CASO op == +
-10    CALCULE res = X1 + X2
-11      CASO op == -
-12       CALCULE res = X1 - X2
-13         CASO op == *
-14         CALCULE res = X1 * X2
-15           SENÃO OP == /
-16             SE X2!= 0
-17             CALCULE res = X1 / X2
-18             SENÃO ESCREVA"Digite um número maior que zero"
+5  ESCREVA "Digite dois números:" // entrada para as primeiras variaveis
+6  LEIA X1, X2 // armazena a entrada do usuário nas variaveis "X1" e "X2"
+7	 ESCREVA "Escolha uma das operações [+][-][*][/]:" // exibe as quatro operacoes basicas
+8	 LEIA op // armazena a entrada do usuario na variavel "op"
+9     CASO op == + // executa caso a opcao escolhida seja soma
+10    CALCULE res = X1 + X2 // calculo da soma
+11      CASO op == - // executa caso a opcao escolhida seja subtracao 
+12       CALCULE res = X1 - X2 // calculo da subtracao
+13         CASO op == * // executa caso a opcao escolhida seja multiplicacao 
+14         CALCULE res = X1 * X2 // calculo da multiplicacao
+15           SENÃO OP == /   // executa caso a opcao escolhida seja divisao
+16             SE X2!= 0  // se X2 for diferente de 0 execute as instruções 
+17             CALCULE res = X1 / X2 // calculo da divisao
+18             SENÃO ESCREVA"Digite um número maior que zero" //caso X2 foi igual a 0
 19             CALCULE res =X1 / X2   
 20  FIM_SE
 21  FIM_ESCOLHA
@@ -176,18 +176,18 @@ E-->Z
 1  ALGORITMO classificação
 2  DECLARE x NÚMERICO INTEIRO
 3  INÍCIO
-4  ESCREVA "digite a idade do nadador"
-5  LEIA x
-6  ESCOLHA
-7   CASO 5<=x<=7
+4  ESCREVA "digite a idade do nadador" // entrada para a primeira variavel
+5  LEIA x // armazena entrada do usuario na variavel "x"
+6  ESCOLHA // escolher dentre as opcoes
+7   CASO 5<=x<=7 // caso a idade estrja dentre 5 e 7 anos
 8     ESCREVA "o nadador é classificado na categoria de infantil A."
-9   CASO 8<=x<=10
+9   CASO 8<=x<=10 // caso a idade esteja entre 8 e 10
 10    ESCREVA "o nadador é classificado na categoria de infantil B."
-11  CASO 11<=x<=13
+11  CASO 11<=x<=13 // caso a idade esteja dentre 11 e 13 
 12    ESCREVA "o nadador é classificado na categoria de juvenil A."
-13  CASO 14<=x<=17
+13  CASO 14<=x<=17 // caso a idade esteja dentre 14 e 17
 14    ESCREVA "o nadador é classificado na categoria de juvenil B."
-15  SENÃO
+15  SENÃO // execute caso a variavel "x" for maior ou igual a 18
 16   X>18
 17    ESCREVA "o nadador é classificado na categoria de adulto."
 18  FIM_ESCOLHA
