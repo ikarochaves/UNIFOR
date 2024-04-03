@@ -24,12 +24,12 @@ F --> H
 1  ALGORITIMO media_nota
 2  DECLARE N1, N2, M
 3  INICIO
-4  ESCREVA "Digite suas duas notas:"
-5  LEIA N1, N2
-6  CALCULE M = N1+N2 / 2
-7  SE M >= 7 ENTAO
+4  ESCREVA "Digite suas duas notas:"  // entrada para a primeira variavel
+5  LEIA N1, N2  // armazena a entrada do usuario nas variaveis "N1" e "N2"
+6  CALCULE M = N1+N2 / 2 // calcule a media das variaveis N1 e N2
+7  SE M >= 7 ENTAO // executa a instrucao caso M >=7
 8    ESCREVA "Parabéns, você está aprovado!"
-9  SENAO
+9  SENAO // executa a instrucao caso M<7 
 10    ESCREVA "Você está reprovado.
 11 FIM_ALGORITIMO
 
@@ -63,13 +63,13 @@ H --> J
 1  ALGORITIMO novo_salario
 2  DECLARE sal_atual, sal_reajuste, sal_reajuste2
 3  INICIO
-4  ESCREVA "Digite o valor do seu salário atual:"
-5  LEIA sal_atual
-6  SE sal_atual >= 500 ENTAO
-7	 CALCULE sal_reajuste = sal_atual+sal_atual*20/100
+4  ESCREVA "Digite o valor do seu salário atual:" // entrada para primeira variavel
+5  LEIA sal_atual // armazena a entrada do usuário na variavel "sal_atual"
+6  SE sal_atual >= 500 ENTAO // executar essa instrução caso a variação "sal_atual" seja >=500
+7	 CALCULE sal_reajuste = sal_atual+sal_atual*20/100 // calcule a variavel "sal_reajuste"
 8	 ESCREVA "Você recebeu um aumento de 20%! Seu novo sálario é: sal_reajuste"
-9  SENAO
-10	 CALCULE sal_reajuste2 = sal_atual+sal_atual*10/100
+9  SENAO // executar caso a variavel "sal_atual" seja <500
+10	 CALCULE sal_reajuste2 = sal_atual+sal_atual*10/100 // calcule a variavel "sal_reajuste2"
 11	 ESCREVA "Você recebeu um aumento de 10%! Seu novo sálario é: sal_reajuste2"
 12  FIM_ALGORITIMO
 
@@ -103,15 +103,15 @@ I --> Z
 ```
 1  ALGORITIMO verifica_par_impar
 2  DECLARE numero, resto NUMERICO
-3  ESCREVA "digite um numero"
-4  LEIA numero
-5  SE numero > 0 ENTAO
-6		resto = numero % 
-7		SE resto == 0 ENTAO
+3  ESCREVA "digite um numero" // entrada da primeira variavel 
+4  LEIA numero // armazena a entrada do usuario na variavel "numero"
+5  SE numero > 0 ENTAO // executar caso a variavel "numero" for >0
+6		resto = numero %2 // calcula o resto da divisao da variavel "numero" por 2
+7		SE resto == 0 ENTAO // executar a instrucao se o resto for igual a 0
 8			ESCREVA "O numero é par"
-9		SENAO
+9		SENAO // executar a instrucao caso o resto nao seja igual a 0
 10			ESCREVA "O número é impar"
-11  SENAO
+11  SENAO // executa a instrucao se a variavel tiver atribuido valor negativo
 12		ESCREVA "O número é postivo!"
 13  FIM_ALGORITIMO
 
@@ -145,11 +145,11 @@ G --> H
 1  ALGORITIMO CNH_IDADE
 2  DECLARE idade, idade_restante
 3  INICIO
-4  ESCREVA "Digite sua idade"
-5  LEIA idade
-6  SE idade >=18 ENTAO
+4  ESCREVA "Digite sua idade" // entrada da primeira variavel
+5  LEIA idade // armazena a entrada do usuario na variavel "idade"
+6  SE idade >=18 ENTAO // executa a instrucao caso a variavel "idade" seja >=18
 7	 ESCREVA "Você é apto a tirar sua CNH!"
-8  SENAO
+8  SENAO //executa a intrucao caso a variavel "idade" nao deja >=18
 9	 CALCULE idade_restante == 18-idade
 10	 ESCREVA "Você não é apto a tirar sua CNH! Faltam idade_restante anos para que você esteja apto."
 11  FIM_ALGORITIMO
