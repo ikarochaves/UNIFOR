@@ -154,30 +154,15 @@ DECLARE n, cont, nota, i: INTEIRO
 INICIO
     ESCREVA "Digite a quantidade de notas dos alunos:" // Entrada da primeira variavel
     LEIA n // armazena a entrada do usuario na variavel "n"
-// nada foi contado ainda, por isso contagem é zero
-    cont = 0 
-
-    // uma condição é aplicada
-    PARA i DE 1 ATE n FAÇA
-
-    // o usuário digita a nota desejada
-        ESCREVA "Digite a nota do aluno", i, ":"
-
-    // nota ficará na memória
-        LEIA nota
-
-    // 50 é o minimo pra aprovação, e 100 é a nota máxima
-        SE nota >= 50 E nota <= 100 ENTAO
-
-    // a contagem passa pro próximo
-            cont = cont + 1 
-
+    cont = 0 // nada foi contado ainda, entao contagem é zero
+    PARA i DE 1 ATE n FAÇA // uma condição é aplicada
+        ESCREVA "Digite a nota do aluno", i, ":" // o usuário digita a nota que deseja 
+        LEIA nota // nota ficará na memória
+        SE nota >= 50 E nota <= 100 ENTAO // 50 é o minimo e 100 é a nota máxima
+            cont = cont + 1 // contagem passa aobpróximo
     FIM_SE
-
     FIM_PARA
-
-    // o resultado é exibido
-    ESCREVA "O numero de alunos aprovados e:", cont
+    ESCREVA "O numero de alunos aprovados e:", cont  // o resultado é exibido
 
 FIM
 
@@ -244,45 +229,21 @@ Algoritmo SomaNumeros
 DECLARE n,i,soma: INTEIRO
 
 INICIO
-
-    // o usuário digitará a quantia desejada
-    ESCREVA "Digite a quantidade de números<br> (n >= 0):"
-    // n ficará na memória
-    LEIA n
-
-    // n não pode ser 0 ou negativo
-    SE n >=0 ENTAO
-
+    ESCREVA "Digite a quantidade de números<br> (n >= 0):" // entrada para a primeira variavel 
+    LEIA n // a variavel "n" ficará armazenada na memória
+    SE n >=0 ENTAO // variavel "n" precisa ser maior ou igual a zero
         // no momento nada foi somado, portanto soma é 0
-        soma <- 0
-
-        // i é declarado i
-        i <- i
-
-        // enquanto i é menor ou igual a quantia de números dita
-        ENQUANTO i <= n FAÇA
-
-            // um número será digitado pelo usuário
-            ESCREVA "Digite um número:"
-
-            // num ficará na memória
-            LEIA num 
-
-            // num é adicionado à soma total
-            soma <- soma + num
-
-            // a contagem passa ao próximo
-            i <- i + 1
-
+        soma <- 0 // "soma" inicia no zero
+        i <- 1 // "i" inicializa em 1
+        ENQUANTO i <= n FAÇA // enquanto  a variavel "i" for menor ou igual a quantia de números dita
+            ESCREVA "Digite um número:" 
+            LEIA num // variavel "num" ficará armazenada na memória
+            soma <- soma + num // "num" é adicionado a soma
+            i <- i + 1 // contagem passa ao próximo
         FIM_ENQUANTO
-
-    // a quantia de números não pode ser negativa ou nula
-    SENAO
+    SENAO // quantia não pode ser nula ou negativa
         "O valor deve ser maior ou igual a zero!"
-
     FIM_SE
-
-    // o resultado é exibido ao usuário
     ESCREVA "A soma dos numeros é , soma"
 
 FIM
@@ -338,35 +299,16 @@ I --LOOP--> E
 ```
 Algoritmo SomaSerie
 DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
-
 INICIO
-
-    // o número de termos é digitado
-    ESCREVA "Digite o número de termos da série S:"
-
-    // o número de termos vai pra memória
-    LEIA n
-    // no momento a soma total é zero
-    S <- 0
-
-    // uma condição é aplicada
-    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
-
-        // o numerador é 1 numero antes do denominador
-        numerador = 2 * i + 1
-
-        // o denominador é 1 numero a mais após o numerador
-        denominador <- 2 * i + 2
-
-        // termo é a divisão 
-        termo = numerador / denominador
-
-        // S é igual à divisão feita
-        S += termo
-
+    ESCREVA "Digite o número de termos da série S:" 
+    LEIA n // variavel "n" ficara armazenado na memória
+    S <- 0 // soma inicializa zero
+    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA // condição é aplicada
+        numerador = 2 * i + 1 // a variavel "numerador" é um numero antes do denominador
+        denominador <- 2 * i + 2 // variavel "denominador" é um numero a mais depois do numerador 
+        termo = numerador / denominador // "termo" é divisão
+        S += termo // variavel "S" é igual à divisão feita
     FIM_PARA
-
-    // S é a soma total dos termos, e é exibido o resultado
     ESCREVA "Soma da série S é ", S
 
 FIM
@@ -416,37 +358,18 @@ H --> I
 ```
 ALGORITMO CalcFatorial
 DECLARE n: INTEIRO
-
 INICIO
-
-    // o usuário vai digitar o qaue se pede
-    ESCREVA "Digite um numero inteiro nao-negativo:"
-
-    // o número ficou memorizado
-    LEIA n
-
-    // n não pode ser negativo
-    SE n >= 0 ENTAO
-
-        // o fator do cálculo será 1
-        fator <- 1
-
-        // uma condição é aplicada
-        PARA i DE 1 ATÉ n PASSO 1 FAÇA
-
-            // o fator será o fator multiplicado por i
-            fator <- fator * i        // fator *= i
-
+    ESCREVA "Digite um numero inteiro nao-negativo:" // entrada para primeira variavel
+    LEIA n // variavel "n" armazenada na memoria 
+    SE n >= 0 ENTAO // "n" precisa ser maior ou igual a zero 
+        fator <- 1 // "fator" será 1
+        PARA i DE 1 ATÉ n PASSO 1 FAÇA //condição aplicada
+            fator <- fator * i // variavel "fator" será multiplicado por pela variavel "i"
         FIM_PARA
-
-        // o resultado é exibido
         ESCREVA "O fatorial de, n, é:", fator
-
-    // caso a condição não seja satisfeita
-    SENAO
+    SENAO // caso a condição não seja satisfatória
         ESCREVA "O valor deve ser maior ou igual a zero!"
     FIM_SE
-
 FIM
 ```
 
@@ -495,36 +418,16 @@ K --LOOP--> F
 ```
 ALGORITMO GeraFibonacci
 DECLARE n, a, b, termo_atual: INTEIRO
-
 INICIO
-
-    // a quantia de termos é exigida
     ESCREVA "Número de termos da série Fibonacci:"
-
-    // a quantia vai pra memória
-    LEIA n
-
-    // o primeiro número é zero
-    a <- 0
-
-    // em sequência vem o número 1, o termo b
-    b <- 1
-
-    // uma condição é aplicada
-    PARA i DE 1 ATE n FAÇA
-
-        // a será digitado
+    LEIA n // variavel "n" armazenada na memoria 
+    a <- 0 // "a" inicializa com 0
+    b <- 1 // "b" inicializa com 1
+    PARA i DE 1 ATE n FAÇA // uma condição é aplicada
         ESCREVA a
-
-        // o termo atual é os dois anteriores somados
-        termo_atual <- a + b
-
-        // b agora é a
-        a <- b
-
-        // o termo atual agora é b
-        b <- termo_atual
-
+        termo_atual <- a + b // variavel "termo_atual" é a soma de "a" + "b"
+        a <- b // variavel "b" é "a"
+        b <- termo_atual // "termo_atual" é "b"
     FIM_PARA
 FIM
 
@@ -578,42 +481,19 @@ E --> W
 ```
 Algoritmo InverteInteiro
 DECLARE num, num_inv, digito: INTEIRO
-
 INICIO
-
-    // o numero será digitado
     ESCREVA "Digite o número a ser invertido:"
-    LEIA num
-
-    // caso num seja menor que 0
-    SE num < 0 ENTAO
-
-        // o sistema não trabalhará com número negativo
+    LEIA num // variavel "num" armazenada
+    SE num < 0 ENTAO // caso a variavel "num" seja menor que 0
         ESCREVA "O número deve ser positivo!"
-
-    // caso num não seja negativo
-    SENAO
-
-        // o número invertido no momento é 0
-        num_inv <- 0
-
-        // uma condição é aplicada
-        ENQUANTO num > 0 FAÇA
-
-            // o último dígido é 10% do número citado
-            digito <- num % 10
-
-            // multiplica-se o número invertido por 10 e soma com o último digito
-            num_inv <- (num_inv * 10) + digito
-
-            // divide-se o número por 10
-            num <- num // 10
-
-        // o resultado é exibido
+    SENAO // caso "num" seja positivo
+        num_inv <- 0 // o "num_inv" é 0
+        ENQUANTO num > 0 FAÇA // condição é aplicada
+            digito <- num % 10 // último dígido é 10% do número citado
+            num_inv <- (num_inv * 10) + digito // multiplica o número invertido por 10 e soma com o último digito
+            num <- num // 10 // dividir 
         ESCREVA "Número invertido:", num_inv
-
     FIM_SE
-
 FIM
 
 ```
