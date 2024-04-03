@@ -74,15 +74,15 @@ I --> J{{"b =", b}}
 Algoritmo TrocaValores
 INÍCIO
 DECLARE a, b, aux NÚMERICO
-ESCREVA "Digite o valor da a:"
-LEIA a
+ESCREVA "Digite o valor da a:" // entrada para primeira variavel
+LEIA a // armazena entrada do usuario na variavel "a"
 ESCREVA "Digite o valor da b:"
-LEIA b
-aux <-- a
-a <-- b
-b <-- aux
+LEIA b // armazena entrada do usuario na variavel "b"
+aux <-- a // declarou que a variavel "a" e auxiliar 
+a <-- b // declarou que a variavel "b" é "a"
+b <-- aux // variavel "b" declarado como auxiliar
 ESCREVA "a ="a
-ESCREVA "b ="b
+ESCREVA "b ="b // valores trocados usando uma variavel auxiliar 
 FIM_ALGORITMO
 ```
 
@@ -149,27 +149,38 @@ J --LOOP--> E
 #### Pseudocódigo 01 (1 ponto)
 
 ```
-Algoritmo ContaAprovacoes
-DECLARE n, i, cont: NÚMERICO
-ESCREVA "Digite o número de alunos"
-LEIA n
-INÍCIO
-cont <--0
-LEIA cont
-i<--1
-LEIA i
-SE i<=n ENTÃO
-ESCREVA "Digite a nota do aluno,"i
-LEIA nota
-  SE nota >=500 E nota<=100 ENTÃO
-  cont <-- +1
-  i<-- +1
-  SENÃO
-  i<-- +1
-SENÃO
-ESCREVA "Número de alunos aprovados:"cont
-FIM_SE
-FIM_ALGORITMO
+ALGORTIMO ContaAprovacoes
+DECLARE n, cont, nota, i: INTEIRO
+INICIO
+    ESCREVA "Digite a quantidade de notas dos alunos:" // Entrada da primeira variavel
+    LEIA n // armazena a entrada do usuario na variavel "n"
+// nada foi contado ainda, por isso contagem é zero
+    cont = 0 
+
+    // uma condição é aplicada
+    PARA i DE 1 ATE n FAÇA
+
+    // o usuário digita a nota desejada
+        ESCREVA "Digite a nota do aluno", i, ":"
+
+    // nota ficará na memória
+        LEIA nota
+
+    // 50 é o minimo pra aprovação, e 100 é a nota máxima
+        SE nota >= 50 E nota <= 100 ENTAO
+
+    // a contagem passa pro próximo
+            cont = cont + 1 
+
+    FIM_SE
+
+    FIM_PARA
+
+    // o resultado é exibido
+    ESCREVA "O numero de alunos aprovados e:", cont
+
+FIM
+
 ```
 
 #### Teste de mesa 01
@@ -230,29 +241,51 @@ K --LOOP--> G
 
 ```
 Algoritmo SomaNumeros
-DECLARE n, i, num, soma: NÚMERICO
-ESCREVA "Digite a quantidade de números (n >= 0):"
-LEIA n
+DECLARE n,i,soma: INTEIRO
+
 INICIO
-SE n>=0 ENTÃO
-soma<--0
-i<--1
-LEIA i
-SE i <= n ENTÃO
-  REPITA  
-    ESCREVA "Digite um número:"
-    LEIA num
-    soma <-- +num
-    LEIA soma
-    i<-- +1
-    ATE_QUE i > n
-  SENÃO
-  ESCREVA "A soma dos numeros é ,"soma
-SENÃO
-ESCREVA "O valor deve ser maior ou igual a zero!"
-FIM_SE
-FIM_QUE
-FIM_ALGORITIMO
+
+    // o usuário digitará a quantia desejada
+    ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+    // n ficará na memória
+    LEIA n
+
+    // n não pode ser 0 ou negativo
+    SE n >=0 ENTAO
+
+        // no momento nada foi somado, portanto soma é 0
+        soma <- 0
+
+        // i é declarado i
+        i <- i
+
+        // enquanto i é menor ou igual a quantia de números dita
+        ENQUANTO i <= n FAÇA
+
+            // um número será digitado pelo usuário
+            ESCREVA "Digite um número:"
+
+            // num ficará na memória
+            LEIA num 
+
+            // num é adicionado à soma total
+            soma <- soma + num
+
+            // a contagem passa ao próximo
+            i <- i + 1
+
+        FIM_ENQUANTO
+
+    // a quantia de números não pode ser negativa ou nula
+    SENAO
+        "O valor deve ser maior ou igual a zero!"
+
+    FIM_SE
+
+    // o resultado é exibido ao usuário
+    ESCREVA "A soma dos numeros é , soma"
+
+FIM
 ```
 
 #### Teste de mesa
@@ -304,25 +337,39 @@ I --LOOP--> E
 
 ```
 Algoritmo SomaSerie
+DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
 
-DECLARE n, i, S,numerador, denominador, termo: NÚMERICO
-ESCREVA "Digite o número de termos da série S:"
-LEIA n
-INÍCIO
-S <-- 0
-LEIA S
-PARA <i> DE <0> ATE <n> [PASSO1] FAÇA
-LEIA i
-numerador <-- 2*i+1
-LEIA numerador
-denominador <-- 2*i+2
-LEIA denominador
-termo <-- numerador/denominador
-LEIA termo
-S <-- termo
-FIM_PARA
-ESCREVA "Soma da série S é ," S
-FIM_ALGORITMO
+INICIO
+
+    // o número de termos é digitado
+    ESCREVA "Digite o número de termos da série S:"
+
+    // o número de termos vai pra memória
+    LEIA n
+    // no momento a soma total é zero
+    S <- 0
+
+    // uma condição é aplicada
+    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+
+        // o numerador é 1 numero antes do denominador
+        numerador = 2 * i + 1
+
+        // o denominador é 1 numero a mais após o numerador
+        denominador <- 2 * i + 2
+
+        // termo é a divisão 
+        termo = numerador / denominador
+
+        // S é igual à divisão feita
+        S += termo
+
+    FIM_PARA
+
+    // S é a soma total dos termos, e é exibido o resultado
+    ESCREVA "Soma da série S é ", S
+
+FIM
 ```
 
 #### Teste de mesa (0.25 ponto)
@@ -367,23 +414,40 @@ H --> I
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo CalcFatorial
-DECLARE n, i, fator: NÚMERICO
-ESCREVA "Digite um numero inteiro nao-negativo:"
-LEIA n
+ALGORITMO CalcFatorial
+DECLARE n: INTEIRO
+
 INICIO
-SE n >= 0 ENTÃO
-fator <-- 1
-PARA <i> DE <1> ATE n PASSO <1> FAÇA
-LEIA i
-fator <-- fator * i
-LEIA fator
-FIM_PARA
-ESCREVA 'O fatorial de, n, é:" fator
-SENÃO 
-ESCREVA "O valor deve ser maior ou igual a zero!"
-FIM_SE
-FIM_ALGORITMO
+
+    // o usuário vai digitar o qaue se pede
+    ESCREVA "Digite um numero inteiro nao-negativo:"
+
+    // o número ficou memorizado
+    LEIA n
+
+    // n não pode ser negativo
+    SE n >= 0 ENTAO
+
+        // o fator do cálculo será 1
+        fator <- 1
+
+        // uma condição é aplicada
+        PARA i DE 1 ATÉ n PASSO 1 FAÇA
+
+            // o fator será o fator multiplicado por i
+            fator <- fator * i        // fator *= i
+
+        FIM_PARA
+
+        // o resultado é exibido
+        ESCREVA "O fatorial de, n, é:", fator
+
+    // caso a condição não seja satisfeita
+    SENAO
+        ESCREVA "O valor deve ser maior ou igual a zero!"
+    FIM_SE
+
+FIM
 ```
 
 #### Teste de mesa
@@ -429,21 +493,42 @@ K --LOOP--> F
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo GeraFibonacci
-DECLARE ntermos, n, i, a, b, termo_atual
-ESCREVA "Número de termos da série Fibonacci:"
-LEIA ntermos, a, b
+ALGORITMO GeraFibonacci
+DECLARE n, a, b, termo_atual: INTEIRO
+
 INICIO
-a <-- 0
-b <-- 1
-PARA <i> DE <1> ATE <n> PASSO <1> FAÇA
-ESCREVA "a"
-termo_atual <-- a + b
-LEIA termo_atual
-a <-- b
-b <-- termo_atual
-FIM_PARA
-FIM_ALGORITIMO
+
+    // a quantia de termos é exigida
+    ESCREVA "Número de termos da série Fibonacci:"
+
+    // a quantia vai pra memória
+    LEIA n
+
+    // o primeiro número é zero
+    a <- 0
+
+    // em sequência vem o número 1, o termo b
+    b <- 1
+
+    // uma condição é aplicada
+    PARA i DE 1 ATE n FAÇA
+
+        // a será digitado
+        ESCREVA a
+
+        // o termo atual é os dois anteriores somados
+        termo_atual <- a + b
+
+        // b agora é a
+        a <- b
+
+        // o termo atual agora é b
+        b <- termo_atual
+
+    FIM_PARA
+FIM
+
+
 ```
 #### Teste de mesa
 
@@ -492,24 +577,47 @@ E --> W
 
 ```
 Algoritmo InverteInteiro
-DECLARE num, digito, num_inv: NÚMERICO
-ESCREVA "Digite um número inteiro:"
-LEIA num
+DECLARE num, num_inv, digito: INTEIRO
+
 INICIO
-SE num >= 0 ENTÃO
-  num_inv <-- 0
-  ENQUANTO num > 0 FAÇA
-  digito <-- num % 10
-  num_inv <-- num_inv*10 + digito
-  num <-- num//10
-FIM_ENQUANTO
-ESCREVA "Número invertido:", numero_inv
-SENÃO
-ESCREVA "O número deve ser positivo!"
-FIM_SE
-FIM_ALGORITMO
+
+    // o numero será digitado
+    ESCREVA "Digite o número a ser invertido:"
+    LEIA num
+
+    // caso num seja menor que 0
+    SE num < 0 ENTAO
+
+        // o sistema não trabalhará com número negativo
+        ESCREVA "O número deve ser positivo!"
+
+    // caso num não seja negativo
+    SENAO
+
+        // o número invertido no momento é 0
+        num_inv <- 0
+
+        // uma condição é aplicada
+        ENQUANTO num > 0 FAÇA
+
+            // o último dígido é 10% do número citado
+            digito <- num % 10
+
+            // multiplica-se o número invertido por 10 e soma com o último digito
+            num_inv <- (num_inv * 10) + digito
+
+            // divide-se o número por 10
+            num <- num // 10
+
+        // o resultado é exibido
+        ESCREVA "Número invertido:", num_inv
+
+    FIM_SE
+
+FIM
 
 ```
+
 
 #### Teste de mesa
 
