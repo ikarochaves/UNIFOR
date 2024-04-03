@@ -2,7 +2,7 @@
 **Nome**: Ikaro Chaves <br>
 **Disciplina**: Raciocínio Lógico Algorítmico
 
-## Lista 2 
+## Lista 3
 ### Exercício 1
 Atualize o algoritmo para determinar se um número inteiro e positivo é par ou ímpar, usando uma laço condicional para aceitar apenas números maiores ou iguais a zero. 
 
@@ -27,16 +27,16 @@ H-->Z
 ```
 1  ALGORITIMO num_catg
 2  DECLARE x NÚMERICO INTEIRO
-3  ESCREVA "digite um número inteiro"
+3  ESCREVA "digite um número inteiro" // entrada para a primeira variavel
 4  INICIO
-5  SE x>0 ENTÃO 
-6    SE X%2==0 ENTÃO
+5  SE x>0 ENTÃO // executar caso x for maior que 0
+6    SE X%2==0 ENTÃO // se a variavel "x" for divisivel por 2
 7    ESCREVA "número escolhido é par"
-8    SENÃO
+8    SENÃO // se a variavel "x" nao for divisivel por 2
 9    ESCREVA "número escolhido é ímpar"
 10  SENÃO
 11  ESCREVA "digite um número positivo"
-12  LEIA x
+12  LEIA x // armazena a entrada do usuario na variavel "x"
 13  FIM_SE
 14  FIM_ALGORITMO
 
@@ -64,9 +64,9 @@ C-->D([Fim])
 ```
 1  ALGORITMO multiplo
 2  DECLARE i NÚMERICO INTEIRO
-3  INICIO
-4  i<--0
-5  PARA i DE 1 ATÉ 30 PASSO 3 FAÇA
+3  INICIO 
+4  i<--0 // variavel "i" inicializada com 0"
+5  PARA i DE 1 ATÉ 30 PASSO 3 FAÇA // loop contado executa as instrucoes a cada interacao dos valores de "i" 
 6  ESCREAVA i
 7  FIM_PARA
 8  FIM
@@ -98,13 +98,13 @@ H-->I([Fim])
 1  ALGORITMO soma
 2  DECLARE n, soma: NUMERICO
 3  INICIO
-4  ESCREVA "digite um numero"
-5  LEIA n
-6  soma<--0
-7   	ENQUANTO (n!=0) FAÇA
-8   		soma=+n
+4  ESCREVA "digite um numero" // entrada da primeira variavel
+5  LEIA n // armazena a entrada do usuario na variavel "n"
+6  soma<--0 
+7   	ENQUANTO (n!=0) FAÇA // executa intrucao quando variavel "n" for diferente de 0
+8   		soma=+n // calculo soma
 9   		ESCREVA "digite um numero"
-10		LEIA n
+10		LEIA n // armazena entrada do usuario na variavel "n"
 11  FIM_ENQUANTO
 12  ESCREVA soma
 13  FIM
@@ -145,10 +145,10 @@ E-->J([Fim])
 1  ALGORITMO media
 2  DECLARE n, a, soma: NUMERICO
 3  INICIO
-4  soma <-- 0
-5  a <-- 0
+4  soma <-- 0 // inicializacao da variavel soma
+5  a <-- 0 // inicializacao da variavel "a"
 6  ESCREVA "digite uma nota"
-7  LEIA n
+7  LEIA n // armazena entrada do usuario na variavel "n"
 8  	SE (n>=0) ENTÃO
 9  		soma <-- +n
 10		a <-- +1
