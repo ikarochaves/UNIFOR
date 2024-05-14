@@ -10,9 +10,7 @@ D --> F{Há algo que ambas as partes desejam adicionar?}
 F --sim--> G[Escreva aqui]
 F --nao--> H[\Opções\]
 G --> H
-H --> J[Adicione digitais]
-J --> K{Digitais válidadas?}
-K --sim--> L[FIM]
-K --nao--> J
+H --> J[Adicione suas assinaturas digitais]
+J --> L[FIM]
 ````
 
