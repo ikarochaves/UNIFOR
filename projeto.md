@@ -1,4 +1,3 @@
-
 ```mermaid
 flowchart TD
 A([INICIO]) --> B{{Digite os CPF's: }}
